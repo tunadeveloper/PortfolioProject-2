@@ -1,0 +1,27 @@
+﻿@model PortfolioProject_2.Models.Entity.Experience
+@{
+    ViewBag.Title = "BringExperience";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<br />
+<h4>Deneyim Güncelle</h4>
+<br />
+<form method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+    <br />
+    @Html.Label("Pozisyon")
+    @Html.TextBoxFor(x => x.Position, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şirket Adı")
+    @Html.TextBoxFor(x => x.CompanyName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.WorkDate, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control", })
+    <br />
+    <button class="btn btn-warning">Deneyimi Güncelle</button>
+</form>

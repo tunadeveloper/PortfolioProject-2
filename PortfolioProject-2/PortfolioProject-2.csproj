@@ -2472,6 +2472,7 @@
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Experience\Index.cshtml" />
     <Content Include="Views\Experience\AddExperience.cshtml" />
+    <Content Include="Views\Experience\BringExperience.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

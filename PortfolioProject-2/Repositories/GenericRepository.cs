@@ -2,7 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
+using System.Web.Mvc;
+using System.Web.UI.WebControls;
 
 namespace PortfolioProject_2.Repositories
 {
@@ -35,5 +38,9 @@ namespace PortfolioProject_2.Repositories
             db.SaveChanges();
         }
 
+        public T Find(Expression<Func<T, bool>> where)
+        {
+            return db.Set<T>().FirstOrDefault(where);
+        }
     }
 }
