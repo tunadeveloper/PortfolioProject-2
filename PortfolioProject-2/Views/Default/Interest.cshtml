@@ -1,0 +1,10 @@
+﻿@using PortfolioProject_2.Models.Entity
+@model List<Interests>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">HOBİLERİM</h2>
+    @foreach(var x in Model) {
+    <p>@x.Description</p>
+    <p class="mb-0">@x.Description2</p>
+    }
+</div>
