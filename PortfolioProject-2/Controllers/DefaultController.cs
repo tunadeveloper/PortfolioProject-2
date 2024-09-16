@@ -47,9 +47,17 @@ namespace PortfolioProject_2.Controllers
             return PartialView(certificates);
         }
 
+        [HttpGet]
         public PartialViewResult Contact() {
-            
 
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult Contact(Contact contact)
+        {
+            contact.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
+            db.Contact.Add(contact);
+            db.SaveChanges();
             return PartialView();
         }
     }
