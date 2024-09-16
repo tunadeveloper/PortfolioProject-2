@@ -1,0 +1,33 @@
+﻿@using PortfolioProject_2.Models.Entity
+@model List<Experience>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+<br />
+<h2>Deneyimler</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Pozisyon</th>
+        <th>Şirket Adı</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Düzenle</th>
+
+    </tr>
+        @foreach(var x in Model)
+            {
+            <tr>
+                    <td>@x.Id</td>
+                    <td>@x.Position</td>
+                    <td>@x.CompanyName</td>
+                    <td>@x.WorkDate</td>
+                    <td><a href="#" class="btn btn-danger">Sil</a></td>
+                    <td><a href="#" class="btn btn-warning">Düzenle</a></td>
+            </tr>
+            }
+    
+</table>
+<a href="/Experience/AddExperience/" class="btn btn-success">Yeni Deneyim Ekle</a>

@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "AddExperience";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+<br />
+<h4>Yeni Deneyim Ekle</h4>
+<br />
+<form method="post">
+    <label>Pozisyon</label>
+    <input type="text" name="Position" class="form-control" placeholder="Pozisyon Adı"/>
+    <br />
+    <input type="text" name="CompanyName" class="form-control" placeholder="Şirket Adı"/>
+    <br />
+    <input type="text" name="WorkDate" class="form-control" placeholder="Çalışma Tarihi"/>
+    <br />
+    <textarea placeholder="Açıklama" name="Description" class="form-control" rows="5"></textarea>
+    <br />
+    <button class="btn btn-success">Deneyimi Ekle</button>
+</form>
