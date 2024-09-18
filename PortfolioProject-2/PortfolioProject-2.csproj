@@ -132,6 +132,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2473,6 +2474,7 @@
     <Content Include="Views\Experience\Index.cshtml" />
     <Content Include="Views\Experience\AddExperience.cshtml" />
     <Content Include="Views\Experience\BringExperience.cshtml" />
+    <Content Include="Views\Skill\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

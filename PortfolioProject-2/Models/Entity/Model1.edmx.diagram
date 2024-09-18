@@ -11,8 +11,8 @@
         <EntityTypeShape EntityType="MyPortfolioDb2Model.Contact" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MyPortfolioDb2Model.Education" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MyPortfolioDb2Model.Experience" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyPortfolioDb2Model.Interests" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyPortfolioDb2Model.Skill" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyPortfolioDb2Model.Interests" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyPortfolioDb2Model.Skill" Width="1.5" PointX="7.5" PointY="3.875" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

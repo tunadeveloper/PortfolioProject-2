@@ -16,5 +16,6 @@ namespace PortfolioProject_2.Models.Entity
     {
         public int Id { get; set; }
         public string Skills { get; set; }
+        public Nullable<byte> Value { get; set; }
     }
 }
