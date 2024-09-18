@@ -1,0 +1,20 @@
+﻿@model PortfolioProject_2.Models.Entity.Skill
+@{
+    ViewBag.Title = "AddSkill";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<br />
+<h4>Yetenek Ekle</h4>
+<br />
+<form method="post">
+    @Html.Label("Yetenek Başlığı")
+    @Html.TextBoxFor(x => x.Skills, new { @class = "form-control" })
+    <br />
+    @Html.Label("Bilgi Seviyesi")
+    @Html.TextBoxFor(x => x.Value, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Yeteneği Kaydet</button>
+</form>
+
+
