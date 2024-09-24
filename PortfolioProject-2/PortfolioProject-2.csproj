@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
@@ -2473,10 +2474,13 @@
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Experience\Index.cshtml" />
     <Content Include="Views\Experience\AddExperience.cshtml" />
-    <Content Include="Views\Experience\BringExperience.cshtml" />
+    <Content Include="Views\Experience\UpdateExperience.cshtml" />
     <Content Include="Views\Skill\Index.cshtml" />
     <Content Include="Views\Skill\AddSkill.cshtml" />
-    <Content Include="Views\Skill\UpgradeSkill.cshtml" />
+    <Content Include="Views\Skill\UpdateSkill.cshtml" />
+    <Content Include="Views\Education\Index.cshtml" />
+    <Content Include="Views\Education\AddEducation.cshtml" />
+    <Content Include="Views\Education\UpdateEducation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

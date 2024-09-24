@@ -1,0 +1,34 @@
+﻿@model PortfolioProject_2.Models.Entity.Education
+@{
+    ViewBag.Title = "UpdateEducation";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<br />
+<h4>Eğitimi Düzenleme</h4>
+<br />
+<form method="post">
+    @Html.Label("Üniversite Adı")
+    @Html.TextBoxFor(x => x.UniversityName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.UniversityName, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Bölüm Adı")
+    @Html.TextBoxFor(x => x.TrainingName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.TrainingName, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Agno")
+    @Html.TextBoxFor(x => x.Agno, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Agno, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Eğitim Tarihi")
+    @Html.TextBoxFor(x => x.EducationDate, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.EducationDate, "", new { @style = "color:red" })
+    <br />
+    <br />
+    <button class="btn btn-success">Eğitimi Düzenle</button>
+</form>
+
+

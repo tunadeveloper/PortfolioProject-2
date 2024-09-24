@@ -41,13 +41,13 @@ namespace PortfolioProject_2.Controllers
         }
 
         [HttpGet]
-        public ActionResult UpgradeSkill(int id)
+        public ActionResult UpdateSkill(int id)
         {
             var skill = repo.Find(x => x.Id == id);
             return View(skill);
         }
         [HttpPost]
-        public ActionResult UpgradeSkill(Skill skill)
+        public ActionResult UpdateSkill(Skill skill)
         {
             var s = repo.Find(x => x.Id == skill.Id);
             s.Skills = skill.Skills;

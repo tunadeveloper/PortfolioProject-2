@@ -11,14 +11,20 @@ namespace PortfolioProject_2.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Education
     {
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "Bu Alaný Boþ Geçemezsiniz!"), StringLength(100, ErrorMessage = "Maksimum 100 karakterlik veri giriþi yapýnýz!")]
         public string UniversityName { get; set; }
+        [Required(ErrorMessage = "Bu Alaný Boþ Geçemezsiniz!"), StringLength(100, ErrorMessage = "Maksimum 100 karakterlik veri giriþi yapýnýz!")]
         public string TrainingName { get; set; }
         public string Description { get; set; }
+        [StringLength(10, ErrorMessage = "Maksimum 10 karakterlik veri giriþi yapýnýz!")]
         public string Agno { get; set; }
+        [StringLength(50, ErrorMessage = "Maksimum 50 karakterlik veri giriþi yapýnýz! Örnek Veri Giriþi: AY YIL - AY YIL")]
         public string EducationDate { get; set; }
     }
 }

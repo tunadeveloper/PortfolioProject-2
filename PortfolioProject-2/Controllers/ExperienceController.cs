@@ -40,14 +40,14 @@ namespace PortfolioProject_2.Controllers
         }
 
         [HttpGet]
-        public ActionResult BringExperience(int id)
+        public ActionResult UpdateExperience(int id)
         {
             Experience t = repo.Find(x => x.Id == id);
             return View(t);
         }
 
         [HttpPost]
-        public ActionResult BringExperience(Experience p)
+        public ActionResult UpdateExperience(Experience p)
         {
             Experience t = repo.Find(x => x.Id == p.Id);
             t.Position = p.Position;

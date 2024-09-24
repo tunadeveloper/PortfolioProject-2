@@ -1,11 +1,11 @@
 ﻿@model PortfolioProject_2.Models.Entity.Experience
 @{
-    ViewBag.Title = "BringExperience";
+    ViewBag.Title = "UpdateExperience";
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
 
 <br />
-<h4>Deneyim Güncelle</h4>
+<h4>Deneyim Düzenleme</h4>
 <br />
 <form method="post">
     @Html.Label("ID")
@@ -23,5 +23,5 @@
     @Html.Label("Açıklama")
     @Html.TextAreaFor(x => x.Description, new { @class = "form-control", })
     <br />
-    <button class="btn btn-warning">Deneyimi Güncelle</button>
+    <button class="btn btn-warning">Deneyimi Düzenle</button>
 </form>
