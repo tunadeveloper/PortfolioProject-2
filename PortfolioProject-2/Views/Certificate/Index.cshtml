@@ -1,0 +1,59 @@
+﻿@using PortfolioProject_2.Models.Entity
+@model List<Certificates>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+@{ 
+    int counter = 0;
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header p-2">
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content">
+                                
+                                <div class="timeline timeline-inverse">
+                                    @foreach (var x in Model)
+                                    {
+                                        counter++;
+                                        string dateClass = counter % 2 == 0 ? "#6482AD" : "#987D9A";
+
+                                        <div class="time-label">
+                                            <span style="background-color: @dateClass; color: white">
+                                              - @x.Date -
+                                            </span>
+
+                                        </div>
+                                        <div>
+
+                                            <div class="timeline-item">
+                                                <div class="timeline-body">
+                                                    @x.Description
+                                                </div>
+                                                <div class="timeline-footer">
+                                                    <a href="/Certificate/UpdateCertificate/@x.Id" class="btn btn-info btn-sm">Düzenle</a>
+                                                    <a href="/Certificate/DeleteCertificate/@x.Id" class="btn btn-danger btn-sm">Sil</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                    </div>
+                                <a href="/Certificate/AddCertificate" class="btn btn-success"">Yeni Sertifika Ekle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+</html>

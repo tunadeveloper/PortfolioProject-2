@@ -9,10 +9,12 @@ using System.Web.Mvc;
 
 namespace PortfolioProject_2.Controllers
 {
+    
     public class ExperienceController : Controller
     {
         // GET: Experience
         ExperienceRepository repo = new ExperienceRepository();
+
         public ActionResult Index()
         {
             var experiences = repo.List();

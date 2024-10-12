@@ -8,8 +8,7 @@
 <h4>Deneyim Düzenleme</h4>
 <br />
 <form method="post">
-    @Html.Label("ID")
-    @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.Id)
     <br />
     @Html.Label("Pozisyon")
     @Html.TextBoxFor(x => x.Position, new { @class = "form-control" })

@@ -7,6 +7,7 @@ using PortfolioProject_2.Models.Entity;
 
 namespace PortfolioProject_2.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         // GET: Default
@@ -28,8 +29,13 @@ namespace PortfolioProject_2.Controllers
             var educations = db.Education.ToList();
             return PartialView(educations);
         }
+        public PartialViewResult SocialMedia()
+        {
+            var socialMedia = db.SocialMedia.Where(x=>x.Situation == true).ToList();
+            return PartialView(socialMedia);
+        }
 
-       public PartialViewResult Skill()
+        public PartialViewResult Skill()
         {
             var skills = db.Skill.ToList();
             return PartialView(skills);

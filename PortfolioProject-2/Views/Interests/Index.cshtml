@@ -1,0 +1,22 @@
+﻿@using PortfolioProject_2.Models.Entity
+@model List<Interests>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+<br />
+<h2>Hobi Düzenleme</h2>
+<br />
+<form method="post">
+    @foreach (var x in Model)
+    {
+
+        <label>Açıklama</label>
+<textarea rows="5" class="form-control" name="Description">@x.Description</textarea>
+        <br />
+        <label>Ek Açıklama</label>
+<textarea rows="5" class="form-control" name="Description2">@x.Description2</textarea>
+    }
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>

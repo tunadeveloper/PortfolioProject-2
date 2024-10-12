@@ -1,0 +1,113 @@
+﻿@using PortfolioProject_2.Models.Entity
+@model List<SocialMedia>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<br />
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Sosyal Medya Listesi</h3>
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-success" data-toggle="modal" data-target="#Modal1">Sosyal Medya Hesabı Ekle</button>
+                                <br /><br />
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10px">#</th>
+                                            <th>Sosyal Medya</th>
+                                            <th>Durum</th>
+                                            <th>Düzenle</th>
+                                            <th>Sil</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var x in Model)
+                                        {
+                                            <tr>
+                                                <td>@x.ID</td>
+                                                <td>@x.Name</td>
+                                                @if (x.Situation == true)
+                                                {
+                                                    <td style="color: green">Aktif</td>
+                                                }
+                                                else
+                                                {
+                                                    <td style="color: red;">Pasif</td>
+                                                }
+
+                                                <td>
+                                                    <a class="btn btn-info btn-sm" href="/SocialMedia/Update/@x.ID">
+                                                        <i class="fas fa-pencil-alt">
+                                                        </i>
+                                                        Düzenle
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    @if (x.Situation == true)
+                                                    {
+                                                        <a class="btn btn-danger btn-sm" href="/SocialMedia/SocialMediaPassive/@x.ID">
+                                                            
+                                                            Pasif Olarak Değiştir
+                                                        </a>
+                                                    }
+                                                    else { 
+                                                    
+                                                <a class="btn btn-success btn-sm" href="/SocialMedia/SocialMediaActive/@x.ID">
+                                                    
+                                                    Aktif Olarak Değiştir
+                                                </a>
+                                                    }
+
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal" id="Modal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Sosyal Medya Hesabı Ekle</h2>
+                    </div>
+                    <form method="post" action="/SocialMedia/Add">
+                        <div class="modal-body">
+
+                            <label>Sosyal Medya İsmi</label>
+                            <input type="text" name="Name" class="form-control" placeholder="Örn. Instagram" />
+                            <br />
+                            <label>Sosyal Medya Bağlantısı</label>
+                            <input type="text" name="Name" class="form-control" placeholder="Örn. https://www.instagram.com/username" />
+                            <br />
+                            <label>Icon Değeri</label>
+                            <input type="text" name="Name" class="form-control" placeholder="Örn. fas fa-instagram" />
+                            <br />
+                            <button class="btn btn-success">Kaydet</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -33,5 +33,6 @@ namespace PortfolioProject_2.Models.Entity
         public virtual DbSet<Experience> Experience { get; set; }
         public virtual DbSet<Interests> Interests { get; set; }
         public virtual DbSet<Skill> Skill { get; set; }
+        public virtual DbSet<SocialMedia> SocialMedia { get; set; }
     }
 }

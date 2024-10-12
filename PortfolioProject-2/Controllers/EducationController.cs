@@ -12,6 +12,8 @@ namespace PortfolioProject_2.Controllers
     {
         // GET: Education
         GenericRepository<Education> repo = new GenericRepository<Education>();
+
+        [Authorize]
         public ActionResult Index()
         {
             var education = repo.List();

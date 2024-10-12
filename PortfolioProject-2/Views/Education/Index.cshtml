@@ -15,8 +15,9 @@
         <th>Açıklama</th>
         <th>Agno</th>
         <th>Eğitim Tarihi</th>
-        <th>Sil</th>
         <th>Düzenle</th>
+        <th>Sil</th>
+
 
     </tr>
     @foreach (var x in Model)
@@ -29,15 +30,15 @@
             <td>@x.Agno</td>
             <td>@x.EducationDate</td>
             <td>
-                <a href="/Education/RemoveEducation/@x.Id" class="btn btn-danger">
-                    <i class="fas fa-trash">
-                    </i> Sil
-                </a>
-            </td>
-            <td>
                 <a href="/Education/UpdateEducation/@x.Id" class="btn btn-info">
                     <i class="fas fa-pencil-alt">
                     </i> Düzenle
+                </a>
+            </td>
+            <td>
+                <a href="/Education/RemoveEducation/@x.Id" class="btn btn-danger">
+                    <i class="fas fa-trash">
+                    </i> Sil
                 </a>
             </td>
         </tr>

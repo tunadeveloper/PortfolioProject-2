@@ -13,8 +13,9 @@
         <th>Pozisyon</th>
         <th>Şirket Adı</th>
         <th>Tarih</th>
-        <th>Sil</th>
         <th>Düzenle</th>
+        <th>Sil</th>
+        
 
     </tr>
     @foreach (var x in Model)
@@ -25,17 +26,18 @@
             <td>@x.CompanyName</td>
             <td>@x.WorkDate</td>
             <td>
-                <a href="/Experience/RemoveExperience/@x.Id" class="btn btn-danger">
-                    <i class="fas fa-trash">
-                    </i> Sil
-                </a>
-            </td>
-            <td>
                 <a href="/Experience/UpdateExperience/@x.Id" class="btn btn-info">
                     <i class="fas fa-pencil-alt">
                     </i> Düzenle
                 </a>
             </td>
+            <td>
+                <a href="/Experience/RemoveExperience/@x.Id" class="btn btn-danger">
+                    <i class="fas fa-trash">
+                    </i> Sil
+                </a>
+            </td>
+            
         </tr>
     }
 

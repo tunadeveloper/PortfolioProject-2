@@ -1,0 +1,51 @@
+﻿@using PortfolioProject_2.Models.Entity
+@model List<Contact>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@{ 
+    int counter = 0;
+}
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="tab-pane" id="timeline">
+                                <div class="timeline timeline-inverse">
+                                    @foreach(var x in Model) {
+                                        counter++;
+                                        string dateColor =counter % 2 == 0 ? "#6482AD" : "#987D9A";
+                                    <div class="time-label">
+                                        <span style="background-color: @dateColor; color: white">
+                                            @(((DateTime)x.Date).ToString("dd-MMM-yyyy"))
+                                        </span>
+                                    </div>
+
+                                    <div>
+                                        <i class="fas fa-mail-bulk bg-info"></i>
+                                        <div class="timeline-item">
+                                            <span class="time">@x.Email</span>
+                                            <h3 class="timeline-header"><a href="#">@x.NameSurname</a> @x.Title</h3>
+                                            <div class="timeline-body">
+                                                @x.Description
+                                            </div>
+                                        </div>
+                                    </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>

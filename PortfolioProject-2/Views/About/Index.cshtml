@@ -1,26 +1,44 @@
-﻿
+﻿@using PortfolioProject_2.Models.Entity
+@model List<About>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
 
-<h2>Hakkımda</h2>
-<table class="table table-bordered">
-    <tr>
-        <th>ID</th>
-        <th>Ad</th>
-        <th>Şehir</th>
-    </tr>
+<br />
+<h2>Profil Düzenleme</h2>
+<br />
+<form method="post">
+    @foreach (var x in Model)
+    { 
 
-    <tr>
-        <td>1</td>
-        <td>Tunahan</td>
-        <td>Erzurum</td>
-    </tr>
-    
-    <tr>
-        <td>2</td>
-        <td>Cengiz</td>
-        <td>İstanbul</td>
-    </tr>
-</table>
+        <label>İsim</label>
+        <input type="text" name="Name" value="@x.Name" class="form-control" />
+        <br />
+
+        <label>Soyisim</label>
+        <input type="text" name="Surname" value="@x.Surname" class="form-control" />
+        <br />
+
+        <label>Adres</label>
+        <input type="text" name="Address" value="@x.Address" class="form-control" />
+        <br />
+
+        <label>Telefon Numarası</label>
+        <input type="text" name="PhoneNumber" value="@x.PhoneNumber" class="form-control" />
+        <br />
+
+        <label>E-Posta</label>
+        <input type="text" name="Email" value="@x.Email" class="form-control" />
+        <br />
+
+        <label>Fotoğraf (URL)</label>
+        <input type="text" name="Image" value="@x.Image" class="form-control" />
+        <br />
+
+        <label>Açıklama</label>
+        <textarea rows="5" class="form-control" name="Description">@x.Description</textarea>
+    }
+        <br />
+        <button class="btn btn-success">Güncelle</button>
+    </form>
