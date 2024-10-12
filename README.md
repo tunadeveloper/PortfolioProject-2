@@ -1,4 +1,4 @@
-# 🖼️ **Portfolyo Projesi**
+# 🖼️ **Portfolyo Projesi - 2**
 
 ---
 
