@@ -8,6 +8,7 @@ Bu proje, kullanıcıların kişisel verilerini düzenleyip dinamik bir web taba
 
 - 🔒 **Admin paneline sadece authentication olan kullanıcılar** erişim sağlayabilir. Admin paneline erişmek isteyen bir kullanıcı giriş yapmamışsa, **login** sayfasına yönlendirilir.
 - 👤 Kullanıcılar, kişisel bilgilerini esnek bir biçimde ekleme, güncelleme ve silme işlemleri kolayca gerçekleştirebilir.
+- 🖼️ Görsel olarak etkileyici ve dinamik bir yapıya sahip olması sayesinde, kullanıcıların dikkatini çekmekte ve onların ilgisini üst seviyede tutmaktadır.
 
 ---
 
