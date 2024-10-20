@@ -74,4 +74,3 @@ Bu proje, kullanıcıların kişisel verilerini düzenleyip dinamik bir web taba
 
 ---
 
-🎉 **Ve daha fazlası...**
